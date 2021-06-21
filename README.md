@@ -16,9 +16,13 @@ run the `./scripts/bit_code_check.dart  {the directly to check}` check the bitco
 
 If you are build variable targets, it is necessary to build the watch target on demand, since it will increase the app binary and bundle size.
 
-check the `build flavor` in the `exmaple/ios/Pofile` update the target depdency on demand
+check the `build flavor`in the `exmaple/ios/Pofile` update the target depdency on demand
 
-```ruby
+<details>
+
+<summary> code </summary>
+
+```
 if flavor.include? "bmwchina"  
   updateTargetDependecies("add", project, "Runner", "Watch")
   target 'Watch Extension' do 
@@ -72,6 +76,8 @@ else
   updateTargetDependecies("delete", project, "Runner", "Watch")
 end
 ```
+
+</details>
 
 ## Remove the watch communication plugin dependency
 
