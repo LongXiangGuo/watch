@@ -18,4 +18,9 @@ class WatchEventId {
   static const String STATUS_SYNC = 'STATUS_SYNC';
   static const String REMOTE_COMMAND = 'REMOTE_COMMAND';
   static const String REMOTE_STATUS = 'REMOTE_STATUS';
+
+  /// session control
+  static const String ACTIVE_SESSION = 'activeSession';
+  static const String DEACTIVE_SESSION = 'deactiveSession';
+  static const String SESSION_REACHABLE = 'sessionReachable';
 }

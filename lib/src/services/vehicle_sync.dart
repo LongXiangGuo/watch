@@ -1,10 +1,7 @@
-// Sync current vehicle information
-// Sync vehicle lsc data
-// Sync vehicle image
+import 'package:watch_communication_plugin/src/models/models.dart';
+import 'package:watch_communication_plugin/watch_communication_plugin.dart';
 
-import 'package:watch_communication/src/models/models.dart';
-
-abstract class VehicleSync {
+abstract class VehicleSync implements WatchSession {
   Stream<Vehicle> get currentVehicle;
 
   Stream<Uri> get vehicleImage;

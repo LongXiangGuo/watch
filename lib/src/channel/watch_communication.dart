@@ -1,34 +1,42 @@
 import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:lumberdash/lumberdash.dart';
-import 'package:watch_communication/src/channel/watch_communication_platform.dart';
-import 'package:watch_communication/src/events/watch_event.dart';
-import 'package:watch_communication/src/models/models.dart';
-import 'package:watch_communication/src/services/services.dart';
+import 'package:watch_communication_plugin/src/channel/watch_communication_platform.dart';
+import 'package:watch_communication_plugin/src/events/watch_event.dart';
+import 'package:watch_communication_plugin/src/models/models.dart';
+import 'package:watch_communication_plugin/src/services/services.dart';
+import 'package:watch_communication_plugin/src/utils/log.dart';
 
-abstract class WatchCommunicationInterface {
+abstract class WatchSession {
+  void initialize();
   void active();
   void deactive();
 }
 
-class WatchCommunicationChannel extends WatchCommunicationPlatform {
-  final StreamController _events = () {
-    return StreamController.broadcast(onCancel: () {}, onListen: () {});
-  }();
-  List<StreamSubscription> _recieveMessageSubscriptions = [];
-  List<StreamSubscription> _sendMessageSubscriptions = [];
+class WatchCommunication extends WatchCommunicationPlatform
+    implements WatchSession {
   static const _channel = const MethodChannel(
     'flutter.ios.watch.communication',
   );
+  final StreamController _events = () {
+    return StreamController.broadcast(
+      onCancel: () => log('WatchCommunication cancel'),
+      onListen: null,
+    );
+  }();
+  List<StreamSubscription> _recieveMessageSubscriptions = [];
+  List<StreamSubscription> _sendMessageSubscriptions = [];
 
-  final VehicleSync vehicleSync;
-  final RemoteServiceSync remoteServiceSync;
-  final TokenSync tokenSync;
+  VehicleSync vehicleSync;
+  RemoteSync remoteServiceSync;
+  TokenSync tokenSync;
 
-  WatchCommunicationChannel()
-      : vehicleSync = InjectContainer.shared.resolve<VehicleSync>(),
-        remoteServiceSync = InjectContainer.shared.resolve<RemoteServiceSync>(),
-        tokenSync = InjectContainer.shared.resolve<TokenSync>() {
+  WatchCommunication();
+
+  void initialize() {
+    vehicleSync = WatchContainer.resolve<VehicleSync>();
+    remoteServiceSync = WatchContainer.resolve<RemoteSync>();
+    tokenSync = WatchContainer.resolve<TokenSync>();
     _channel.setMethodCallHandler(_handler);
   }
 
@@ -49,6 +57,7 @@ class WatchCommunicationChannel extends WatchCommunicationPlatform {
           (remoteStatus) {},
         ),
       );
+
     _sendMessageSubscriptions
       ..add(
         vehicleSync.currentVehicle.listen((vehicle) {
@@ -82,9 +91,13 @@ class WatchCommunicationChannel extends WatchCommunicationPlatform {
   }
 
   Stream<T> _recieveMessage<T>(String eventId) {
-    return _events.stream.where(
-      (element) => element[WatchEventId.KEY] == eventId,
-    );
+    return _events.stream
+        .where(
+          (element) => element[WatchEventId.KEY] == eventId,
+        )
+        .map(
+          (event) => event as T,
+        );
   }
 
   void _sendMessage<T>(String eventId, T message) {
@@ -105,6 +118,8 @@ class WatchCommunicationChannel extends WatchCommunicationPlatform {
       _channel.invokeMethod(eventId, {
         'enum': message.toString().split('.').last,
       });
+    } else if (message == null) {
+      _channel.invokeMethod(eventId);
     } else {
       logError('unsupported type ${message.runtimeType}');
     }
@@ -132,6 +147,14 @@ class WatchCommunicationChannel extends WatchCommunicationPlatform {
           id: call.method,
           value: RemoteStatus.fromJson(call.arguments),
         ));
+        break;
+      case WatchEventId.ACTIVE_SESSION:
+        active();
+        _sendMessage(
+          WatchEventId.SESSION_REACHABLE,
+          null,
+        );
+        break;
     }
     return Future.sync(() => null);
   }
@@ -144,7 +167,7 @@ bool _isEnum(dynamic message) {
     final bool hasValue = message.toString().split('.').length == 2;
     return hasIndex && hasValue;
   } on Object catch (error) {
-    logError(error);
+    logErrorInfo(error.toString());
   }
   return false;
 }

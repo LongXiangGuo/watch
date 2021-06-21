@@ -1,6 +1,5 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:watch_communication/watch_communication.dart';
 
 void main() {
   const MethodChannel channel = MethodChannel('watch_communication');

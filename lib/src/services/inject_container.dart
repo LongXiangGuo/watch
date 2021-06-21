@@ -1,31 +1,29 @@
-import 'package:watch_communication/src/services/remote_service_sync.dart';
-import 'package:watch_communication/src/utils/log.dart';
+import 'package:watch_communication_plugin/src/utils/log.dart';
 
-typedef InstanceBuilder<T> = T Function();
+typedef InstanceBuilder<Object> = Object Function();
 
-abstract class InjectContainerInterface {
-  void register<T>(InstanceBuilder<T> builder);
-
-  T resolve<T>();
-}
-
-class InjectContainer implements InjectContainerInterface {
-  static final shared = InjectContainer();
+class WatchContainer {
+  static final _shared = WatchContainer();
   final _registry = Map<Type, InstanceBuilder>();
-  @override
-  void register<T>(InstanceBuilder<T> builder) {
-    if (_registry.keys.contains(T.runtimeType)) {
-      logInfo('InjectContainer register ${T.runtimeType} more then one times');
+  final _map = Map<Type, Object>();
+
+  /// Public Methods
+  static register<T>(InstanceBuilder<T> builder) => _shared._register(builder);
+
+  static T resolve<T>() => _shared._resolve<T>();
+
+  void _register<T>(InstanceBuilder<T> builder) {
+    if (_registry.keys.contains(T.runtimeType.toString())) {
+      logInfo(
+          'InjectContainer register ${T.runtimeType.toString()} more then one times');
     }
-    _registry.addAll({T.runtimeType: builder});
+    _registry.addAll({T: builder});
   }
 
-  @override
-  T resolve<T>() {
-    assert(
-      _registry[T.runtimeType] is T,
-      'InjectContainer resolve ${T.runtimeType} failed',
-    );
-    return _registry[T.runtimeType] as T;
+  T _resolve<T>() {
+    if (_map[T] == null) {
+      _map[T] = _registry[T]();
+    }
+    return _map[T] as T;
   }
 }

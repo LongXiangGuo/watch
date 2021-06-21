@@ -1,10 +1,10 @@
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-import 'channel/../watch_communication_channel.dart';
+import 'watch_communication.dart';
 
 class WatchCommunicationPlatform extends PlatformInterface {
   WatchCommunicationPlatform() : super(token: _token);
 
-  static WatchCommunicationPlatform _instance = WatchCommunicationChannel();
+  static WatchCommunicationPlatform _instance = WatchCommunication();
 
   static const Object _token = Object();
 

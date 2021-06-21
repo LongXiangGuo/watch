@@ -1,8 +1,25 @@
-import 'package:watch_communication/src/models/mappable.dart';
+import 'package:watch_communication_plugin/src/models/mappable.dart';
 
 class Vehicle implements Mappable {
-  @override
-  Map<String, dynamic> toJson() {}
+  final String vin;
+  final String lisence;
+  final String dateTime;
+  Vehicle({
+    this.vin,
+    this.lisence,
+    this.dateTime,
+  });
 
-  factory Vehicle.fromJson(dynamic json) {}
+  @override
+  Map<String, dynamic> toJson() => {
+        'vin': vin,
+        'lisence': lisence,
+        'dateTime': dateTime,
+      };
+
+  factory Vehicle.fromJson(dynamic json) => Vehicle(
+        vin: json['vin'],
+        lisence: json['lisence'],
+        dateTime: json['dateTime'],
+      );
 }
