@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 void main(List<String> args) async {
+  print(args);
   await checkLLVMDepdency(
     args.isNotEmpty ? args[0] : '/Users/qxq4633/mobile-connected/',
   );

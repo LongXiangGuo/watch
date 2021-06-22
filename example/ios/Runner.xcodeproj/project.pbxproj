@@ -412,7 +412,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "source $SRCROOT/scripts/emmbed_watch.sh\n";
+			shellScript = "source $SRCROOT/scripts/emmbed_watch.sh\n\necho $CONFIGURATION\necho \"ddddd\"\n";
 		};
 		7CD2A349C67B425AD93935C5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
