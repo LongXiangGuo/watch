@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Uncomment this line to define a global platform for your project
 platform :ios, '13.0'
 source 'https://github.com/CocoaPods/Specs.git'
@@ -10,14 +12,13 @@ ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 require 'xcodeproj'
 project_path = 'Runner.xcodeproj'
 project = Xcodeproj::Project.open(project_path)
- 
-flavor='bmwchinadevelopment'
 
-project 'Runner', {
-  'Debug' => :debug,
-  'Profile' => :release,
-  'Release' => :release,
-}
+flavor = 'bmwchinadevelopment'
+
+project 'Runner',
+        'Debug' => :debug,
+        'Profile' => :release,
+        'Release' => :release
 
 def flutter_root
   generated_xcode_build_settings_path = File.expand_path(File.join('..', 'Flutter', 'Generated.xcconfig'), __FILE__)
@@ -36,49 +37,57 @@ require File.expand_path(File.join('packages', 'flutter_tools', 'bin', 'podhelpe
 
 flutter_ios_podfile_setup
 
-target 'Runner' do
+def shared_pods
   use_frameworks!
   use_modular_headers!
-  
+
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 end
 
-def updateTargetDependecies(mode, project, app_target_name, dependency_target_name)
-  
-  require 'xcodeproj'
-  app_target = project.targets.find { |t| t.name == app_target_name }
-  target = project.targets.find { |t| t.name == dependency_target_name }  
-  dependency = app_target.dependency_for_target(target) 
-  if mode == 'add'
-      if dependency
-          puts "Podfie [WARN] App already has dependency on #{target.name}"
-          else
-          app_target.add_dependency(target)
-          puts "Podfie #{app_target} add_dependency #{target} "
-      end
-  else
-      if dependency
-          app_target.dependencies.delete(dependency)
-      else
-          puts "Podfie Couldn't find dependency on #{target.name}"
-      end
-  end 
-  project.save() 
+target 'Runner' do
+  shared_pods
 end
 
-if flavor.include? "bmwchina"  
-  updateTargetDependecies("add", project, "Runner", "Watch")
-  target 'Watch Extension' do 
+def updateTargetDependecies(mode, project, app_target_name, dependency_target_name)
+  require 'xcodeproj'
+  app_target = project.targets.find { |t| t.name == app_target_name }
+  target = project.targets.find { |t| t.name == dependency_target_name }
+  dependency = app_target.dependency_for_target(target)
+  if mode == 'add'
+    if dependency
+      puts "Podfie [WARN] App already has dependency on #{target.name}"
+    else
+      app_target.add_dependency(target)
+      puts "Podfie #{app_target} add_dependency #{target} "
+    end
+  else
+    if dependency
+      app_target.dependencies.delete(dependency)
+    else
+      puts "Podfie Couldn't find dependency on #{target.name}"
+    end
+  end
+  project.save()
+end
+
+if flavor.include? 'bmwchina'
+  updateTargetDependecies('add', project, 'Runner', 'Watch')
+  target 'Watch Extension' do
     use_frameworks!
     use_modular_headers!
-    platform :watchos, '7.0'  
+    platform :watchos, '7.0'
     pod 'Alamofire'
     pod 'Swinject'
     pod 'SwiftyRSA'
-    pod 'WatchCommunication', :git => 'git@code.connected.bmw:LongxiangGuo/watch_communication.git'
-  end 
+    pod 'WatchCommunication', git: 'git@code.connected.bmw:LongxiangGuo/watch_communication.git'
+  end
 else
-  updateTargetDependecies("delete", project, "Runner", "Watch")
+  updateTargetDependecies('delete', project, 'Runner', 'Watch')
+end
+
+pre_install do |installer|
+  # workaround for https://github.com/CocoaPods/CocoaPods/issues/3289
+  Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
 end
 
 post_install do |installer|
@@ -86,7 +95,10 @@ post_install do |installer|
     flutter_additional_ios_build_settings(target)
     target.build_configurations.each do |config|
       config.build_settings['ENABLE_BITCODE'] = 'YES'
+      # Fix Flutter simunlator x86_64 not supported
+      config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
+      config.build_settings['ARCHS[sdk=iphonesimulator*]'] = 'x86_64'
+      config.build_settings['VALID_ARCHS[sdk=iphonesimulator*]'] = 'x86_64' 
     end
   end
 end
-

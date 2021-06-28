@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>com.example.watchCommunicationExample</string>
+	<string>$(FLUTTER_BUNDLE_IDENTIFIER).watchkitapp</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

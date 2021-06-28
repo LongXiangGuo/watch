@@ -3,8 +3,11 @@ import 'dart:io';
 
 void main(List<String> args) async {
   print(args);
+  print("0====  ${args.isNotEmpty}");
   await checkLLVMDepdency(
-    args.isNotEmpty ? args[0] : '/Users/qxq4633/mobile-connected/',
+    args.isNotEmpty
+        ? args[0]
+        : '/Users/qxq4633/Library/DerivedData/Runner-fbjdnfdlzpbepggjyrkatdkgfjxj/Build/Products/Debug-universalchina-iphonesimulator',
   );
 }
 
@@ -34,10 +37,11 @@ Future<int> runAndStream(
   bool attachStdOut = true,
   bool attachStdErr = true,
 }) async {
+  print("1====");
   if (printExecutionCommandPreview) {
     print('executable $executable args: $args');
   }
-
+  print("2====");
   final process =
       await Process.start(executable, args, workingDirectory: workingDir?.path);
 
@@ -46,7 +50,7 @@ Future<int> runAndStream(
 
   final processStdOut = <int>[];
   final processStdErr = <int>[];
-
+  print("3====");
   if (attachStdOut) {
     subStdOut = process.stdout.listen(processStdOut.addAll);
   }
@@ -78,7 +82,7 @@ Future<int> runAndStream(
 
 Future checkLLVMDepdency(String workDirPath) async {
   final dir = Directory.fromUri(Uri.file(workDirPath));
-
+  print("=== dir ${dir.path}");
   await for (var entity in dir.list(recursive: true, followLinks: false)) {
     final lastComponent = entity.absolute.path.split('/').last;
     if (lastComponent.endsWith('.framework')) {
@@ -95,6 +99,7 @@ Future checkLLVMDepdency(String workDirPath) async {
         ],
         workingDirectory: workDirPath,
       );
+      print("=== dir1 ${dir.path}");
       if (process.stdout.contains('LLVM')) {
         _log('✅ $lastComponent');
       } else if (process.stderr.isNotEmpty) {

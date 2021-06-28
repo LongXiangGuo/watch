@@ -1,0 +1,10 @@
+#include "Pods/Target Support Files/Pods-Watch Extension/Pods-Watch Extension.debug-bmwchinauniversal.xcconfig"
+#include "Pods/Target Support Files/Pods-Watch Extension/Pods-Watch Extension.release-bmwchinauniversal.xcconfig" 
+
+CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = $(inherited) NO
+FRAMEWORK_SEARCH_PATHS ="${PODS_CONFIGURATION_BUILD_DIR}/Alamofire" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyRSA" "${PODS_CONFIGURATION_BUILD_DIR}/Swinject-watchOS" "${PODS_CONFIGURATION_BUILD_DIR}/WatchCommunication"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyRSA/SwiftyRSA.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Swinject-watchOS/Swinject.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/WatchCommunication/WatchCommunication.framework/Headers"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_LDFLAGS = -framework "Alamofire" -framework "CFNetwork" -framework "ClockKit" -framework "Combine" -framework "Foundation" -framework "Security" -framework "SwiftyRSA" -framework "Swinject" -framework "WatchCommunication" -framework "WatchConnectivity"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
