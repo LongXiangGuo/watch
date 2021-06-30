@@ -1,8 +1,8 @@
 import 'package:watch_communication_plugin/src/models/mappable.dart';
 
 class RemoteCommand implements Mappable {
-  final String type;
-  final String dateTime;
+  final String? type;
+  final String? dateTime;
   RemoteCommand({
     this.type,
     this.dateTime,

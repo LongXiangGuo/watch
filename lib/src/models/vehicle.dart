@@ -1,9 +1,9 @@
 import 'package:watch_communication_plugin/src/models/mappable.dart';
 
 class Vehicle implements Mappable {
-  final String vin;
-  final String lisence;
-  final String dateTime;
+  final String? vin;
+  final String? lisence;
+  final String? dateTime;
   Vehicle({
     this.vin,
     this.lisence,

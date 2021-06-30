@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 class WatchEvent<T> {
   /// see [WatchEventId]
   final String id;
-  final T value;
+  final T? value;
   WatchEvent({
-    @required this.id,
+    required this.id,
     this.value,
   });
 }

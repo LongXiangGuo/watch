@@ -1,9 +1,9 @@
 import 'package:watch_communication_plugin/src/models/mappable.dart';
 
 class Token implements Mappable {
-  final String accessToken;
-  final String refreshToken;
-  final DateTime dateTime;
+  final String? accessToken;
+  final String? refreshToken;
+  final DateTime? dateTime;
   Token({
     this.accessToken,
     this.refreshToken,

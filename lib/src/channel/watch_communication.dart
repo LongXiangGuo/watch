@@ -27,9 +27,9 @@ class WatchCommunication extends WatchCommunicationPlatform
   List<StreamSubscription> _recieveMessageSubscriptions = [];
   List<StreamSubscription> _sendMessageSubscriptions = [];
 
-  VehicleSync vehicleSync;
-  RemoteSync remoteServiceSync;
-  TokenSync tokenSync;
+  VehicleSync? vehicleSync;
+  RemoteSync? remoteServiceSync;
+  TokenSync? tokenSync;
 
   WatchCommunication();
 
@@ -60,7 +60,7 @@ class WatchCommunication extends WatchCommunicationPlatform
 
     _sendMessageSubscriptions
       ..add(
-        vehicleSync.currentVehicle.listen((vehicle) {
+        vehicleSync!.currentVehicle.listen((vehicle) {
           _sendMessage(
             WatchEventId.VEHICLE_INFO,
             vehicle,
@@ -68,7 +68,7 @@ class WatchCommunication extends WatchCommunicationPlatform
         }),
       )
       ..add(
-        remoteServiceSync.remoteStatus.listen((status) {
+        remoteServiceSync!.remoteStatus.listen((status) {
           _sendMessage(
             WatchEventId.REMOTE_STATUS,
             status,
@@ -76,7 +76,7 @@ class WatchCommunication extends WatchCommunicationPlatform
         }),
       )
       ..add(
-        tokenSync.token.listen((token) {
+        tokenSync!.token.listen((token) {
           _sendMessage(
             WatchEventId.STATUS_SYNC,
             token,

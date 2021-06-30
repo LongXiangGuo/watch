@@ -1,9 +1,9 @@
 import 'package:watch_communication_plugin/src/models/mappable.dart';
 
 class RemoteStatus implements Mappable {
-  final String type;
-  final String status;
-  final String dateTime;
+  final String? type;
+  final String? status;
+  final String? dateTime;
   RemoteStatus({
     this.type,
     this.status,
