@@ -1,3 +1,0 @@
-[submodule "ios/Classes/WatchCommunication"]
-	path = ios/Classes/WatchCommunication
-	url = git@code.connected.bmw:LongxiangGuo/watch_communication.git

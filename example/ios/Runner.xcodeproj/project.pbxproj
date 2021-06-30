@@ -19,6 +19,7 @@
 		714B0FA8266A6B8700C62BC2 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714B0FA7266A6B8700C62BC2 /* NotificationController.swift */; };
 		714B0FAA266A6B8700C62BC2 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714B0FA9266A6B8700C62BC2 /* ComplicationController.swift */; };
 		714B0FAC266A6B8800C62BC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 714B0FAB266A6B8800C62BC2 /* Assets.xcassets */; };
+		7184FB8C268C4FC100870295 /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 714B0F92266A6B8600C62BC2 /* Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
@@ -54,6 +55,17 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7184FB8B268C4FAD00870295 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				7184FB8C268C4FC100870295 /* Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9705A1C41CF9048500538489 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -71,6 +83,7 @@
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
+		46D2D2948D9BA74981E814CA /* Pods-Watch Extension.release-chinauniversal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch Extension.release-chinauniversal.xcconfig"; path = "Target Support Files/Pods-Watch Extension/Pods-Watch Extension.release-chinauniversal.xcconfig"; sourceTree = "<group>"; };
 		49AC12E39EABF61DCA0903EA /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 		58F9A8221D3775F46015FC87 /* Pods_Watch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Watch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D86DEEF61CBF9F9AFC3987F /* Pods-Watch Extension.debug-globaluniversal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch Extension.debug-globaluniversal.xcconfig"; path = "Target Support Files/Pods-Watch Extension/Pods-Watch Extension.debug-globaluniversal.xcconfig"; sourceTree = "<group>"; };
@@ -96,8 +109,9 @@
 		7AFA3C8E1D35360C0083082E /* globaluniversal.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = globaluniversal.xcconfig; path = Flutter/globaluniversal.xcconfig; sourceTree = "<group>"; };
 		82DC8841B192292C72ADA792 /* Pods-Watch Extension.release-globaluniversal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch Extension.release-globaluniversal.xcconfig"; path = "Target Support Files/Pods-Watch Extension/Pods-Watch Extension.release-globaluniversal.xcconfig"; sourceTree = "<group>"; };
 		854B79D71850393B4353EEF5 /* Pods-Runner.debug-bmwchinauniversal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug-bmwchinauniversal.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug-bmwchinauniversal.xcconfig"; sourceTree = "<group>"; };
+		8A768C1FC75F4714700B1869 /* Pods-Runner.debug-chinauniversal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug-chinauniversal.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug-chinauniversal.xcconfig"; sourceTree = "<group>"; };
 		93233DCD4DE46940915A6E4E /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
-		9740EEB21CF90195004384FC /* bmwchinauniversal.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = bmwchinauniversal.xcconfig; path = Flutter/bmwchinauniversal.xcconfig; sourceTree = "<group>"; };
+		9740EEB21CF90195004384FC /* chinauniversal.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = chinauniversal.xcconfig; path = Flutter/chinauniversal.xcconfig; sourceTree = "<group>"; };
 		9740EEB31CF90195004384FC /* Generated.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Generated.xcconfig; path = Flutter/Generated.xcconfig; sourceTree = "<group>"; };
 		97C146EE1CF9000F007C117D /* Runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Runner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C146FB1CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,8 +120,10 @@
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2FDFCFA428FD4F3EE27531E /* Pods-Watch Extension.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch Extension.profile.xcconfig"; path = "Target Support Files/Pods-Watch Extension/Pods-Watch Extension.profile.xcconfig"; sourceTree = "<group>"; };
 		A69C5001A207562E2F534969 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
+		ADA03EC0C1CDDC39855854E2 /* Pods-Runner.release-chinauniversal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release-chinauniversal.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release-chinauniversal.xcconfig"; sourceTree = "<group>"; };
 		C44281C4D05E83ADD5890F62 /* Pods-Runner.release-globaluniversal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release-globaluniversal.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release-globaluniversal.xcconfig"; sourceTree = "<group>"; };
 		CE9CA5CFA625EEF50B234E49 /* Pods-Watch Extension.release-bmwchinauniversal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch Extension.release-bmwchinauniversal.xcconfig"; path = "Target Support Files/Pods-Watch Extension/Pods-Watch Extension.release-bmwchinauniversal.xcconfig"; sourceTree = "<group>"; };
+		D7F199C8769532EF7258496C /* Pods-Watch Extension.debug-chinauniversal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch Extension.debug-chinauniversal.xcconfig"; path = "Target Support Files/Pods-Watch Extension/Pods-Watch Extension.debug-chinauniversal.xcconfig"; sourceTree = "<group>"; };
 		E3A911B3CFEFDD75F6A96EFA /* Pods-Watch Extension.debug-bmwchinauniversal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch Extension.debug-bmwchinauniversal.xcconfig"; path = "Target Support Files/Pods-Watch Extension/Pods-Watch Extension.debug-bmwchinauniversal.xcconfig"; sourceTree = "<group>"; };
 		E6E9389E8534E31520EB5F21 /* Pods-Runner.debug-globaluniversal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug-globaluniversal.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug-globaluniversal.xcconfig"; sourceTree = "<group>"; };
 		F35C5DE8ECBE1955EB55377F /* Pods-Watch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch Extension.release.xcconfig"; path = "Target Support Files/Pods-Watch Extension/Pods-Watch Extension.release.xcconfig"; sourceTree = "<group>"; };
@@ -169,6 +185,10 @@
 				82DC8841B192292C72ADA792 /* Pods-Watch Extension.release-globaluniversal.xcconfig */,
 				CE9CA5CFA625EEF50B234E49 /* Pods-Watch Extension.release-bmwchinauniversal.xcconfig */,
 				A2FDFCFA428FD4F3EE27531E /* Pods-Watch Extension.profile.xcconfig */,
+				8A768C1FC75F4714700B1869 /* Pods-Runner.debug-chinauniversal.xcconfig */,
+				ADA03EC0C1CDDC39855854E2 /* Pods-Runner.release-chinauniversal.xcconfig */,
+				D7F199C8769532EF7258496C /* Pods-Watch Extension.debug-chinauniversal.xcconfig */,
+				46D2D2948D9BA74981E814CA /* Pods-Watch Extension.release-chinauniversal.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -203,7 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */,
-				9740EEB21CF90195004384FC /* bmwchinauniversal.xcconfig */,
+				9740EEB21CF90195004384FC /* chinauniversal.xcconfig */,
 				7AFA3C8E1D35360C0083082E /* globaluniversal.xcconfig */,
 				9740EEB31CF90195004384FC /* Generated.xcconfig */,
 			);
@@ -300,7 +320,7 @@
 				9705A1C41CF9048500538489 /* Embed Frameworks */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
 				890285D82908674E8ED1CB8D /* [CP] Embed Pods Frameworks */,
-				7194A6B3267C7A3E0040CA82 /* Embed Watch Content By Configration */,
+				7184FB8B268C4FAD00870295 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
@@ -334,9 +354,8 @@
 					};
 					97C146ED1CF9000F007C117D = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 2K6X2XEF3Z;
 						LastSwiftMigration = 1100;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -406,24 +425,6 @@
 			shellPath = /bin/sh;
 			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed_and_thin\n";
 		};
-		7194A6B3267C7A3E0040CA82 /* Embed Watch Content By Configration */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Watch Content By Configration";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "source $SRCROOT/scripts/emmbed_watch.sh\n\necho $CONFIGURATION\necho \"ddddd\"\n";
-		};
 		7CD2A349C67B425AD93935C5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -455,14 +456,12 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/device_info/device_info.framework",
-				"${BUILT_PRODUCTS_DIR}/mzanalytics_mybmw/mzanalytics_mybmw.framework",
 				"${BUILT_PRODUCTS_DIR}/watch_communication_plugin/watch_communication_plugin.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/device_info.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/mzanalytics_mybmw.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/watch_communication_plugin.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -624,7 +623,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FLUTTER_BUNDLE_IDENTIFIER = com.bmw.myBMW.preseries.cn.univ;
+				FLUTTER_BUNDLE_IDENTIFIER = fluttter.watch.example;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -649,17 +648,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+				DEVELOPMENT_TEAM = A396U9F5VD;
 				ENABLE_BITCODE = YES;
-				FLUTTER_BUNDLE_IDENTIFIER = com.bmw.myBMW.preseries.cn.univ;
+				FLUTTER_BUNDLE_IDENTIFIER = fluttter.watch.example;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
@@ -773,11 +770,7 @@
 				DEVELOPMENT_TEAM = A396U9F5VD;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Watch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(FLUTTER_BUNDLE_IDENTIFIER).watchkitapp.watchkitextension";
@@ -807,11 +800,7 @@
 				DEVELOPMENT_TEAM = A396U9F5VD;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Watch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(FLUTTER_BUNDLE_IDENTIFIER).watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
@@ -838,11 +827,7 @@
 				DEVELOPMENT_TEAM = A396U9F5VD;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Watch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(FLUTTER_BUNDLE_IDENTIFIER).watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
@@ -854,7 +839,7 @@
 			};
 			name = Profile;
 		};
-		7194A6B8267C9A330040CA82 /* Release-bmwchinauniversal */ = {
+		7194A6B8267C9A330040CA82 /* Release-chinauniversal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -887,7 +872,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FLUTTER_BUNDLE_IDENTIFIER = com.bmw.myBMW.preseries.cn.univ;
+				FLUTTER_BUNDLE_IDENTIFIER = fluttter.watch.example;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -904,26 +889,23 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = "Release-bmwchinauniversal";
+			name = "Release-chinauniversal";
 		};
-		7194A6B9267C9A330040CA82 /* Release-bmwchinauniversal */ = {
+		7194A6B9267C9A330040CA82 /* Release-chinauniversal */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9740EEB21CF90195004384FC /* bmwchinauniversal.xcconfig */;
+			baseConfigurationReference = 9740EEB21CF90195004384FC /* chinauniversal.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = YES;
-				FLUTTER_BUNDLE_IDENTIFIER = com.bmw.myBMW.preseries.cn.univ;
+				FLUTTER_BUNDLE_IDENTIFIER = fluttter.watch.example;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
@@ -935,9 +917,9 @@
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
-			name = "Release-bmwchinauniversal";
+			name = "Release-chinauniversal";
 		};
-		7194A6BA267C9A330040CA82 /* Release-bmwchinauniversal */ = {
+		7194A6BA267C9A330040CA82 /* Release-chinauniversal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -962,11 +944,11 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
-			name = "Release-bmwchinauniversal";
+			name = "Release-chinauniversal";
 		};
-		7194A6BB267C9A330040CA82 /* Release-bmwchinauniversal */ = {
+		7194A6BB267C9A330040CA82 /* Release-chinauniversal */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE9CA5CFA625EEF50B234E49 /* Pods-Watch Extension.release-bmwchinauniversal.xcconfig */;
+			baseConfigurationReference = 46D2D2948D9BA74981E814CA /* Pods-Watch Extension.release-chinauniversal.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -979,11 +961,7 @@
 				DEVELOPMENT_TEAM = A396U9F5VD;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Watch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(FLUTTER_BUNDLE_IDENTIFIER).watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
@@ -993,7 +971,7 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
-			name = "Release-bmwchinauniversal";
+			name = "Release-chinauniversal";
 		};
 		7194A6BC267C9AEE0040CA82 /* Debug-globaluniversal */ = {
 			isa = XCBuildConfiguration;
@@ -1028,7 +1006,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FLUTTER_BUNDLE_IDENTIFIER = com.bmw.myBMW.preseries.cn.univ;
+				FLUTTER_BUNDLE_IDENTIFIER = fluttter.watch.example;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1059,16 +1037,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = YES;
-				FLUTTER_BUNDLE_IDENTIFIER = com.bmw.myBMW.preseries.cn.univ;
+				FLUTTER_BUNDLE_IDENTIFIER = fluttter.watch.example;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
@@ -1128,11 +1103,7 @@
 				DEVELOPMENT_TEAM = A396U9F5VD;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Watch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(FLUTTER_BUNDLE_IDENTIFIER).watchkitapp.watchkitextension";
@@ -1180,7 +1151,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FLUTTER_BUNDLE_IDENTIFIER = com.bmw.myBMW.preseries.cn.univ;
+				FLUTTER_BUNDLE_IDENTIFIER = fluttter.watch.example;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1207,16 +1178,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = YES;
-				FLUTTER_BUNDLE_IDENTIFIER = com.bmw.myBMW.preseries.cn.univ;
+				FLUTTER_BUNDLE_IDENTIFIER = fluttter.watch.example;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
@@ -1272,11 +1240,7 @@
 				DEVELOPMENT_TEAM = A396U9F5VD;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Watch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(FLUTTER_BUNDLE_IDENTIFIER).watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
@@ -1288,9 +1252,9 @@
 			};
 			name = "Release-globaluniversal";
 		};
-		7194A6C4267CA3940040CA82 /* Debug-bmwchinauniversal */ = {
+		7194A6C4267CA3940040CA82 /* Debug-chinauniversal */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9740EEB21CF90195004384FC /* bmwchinauniversal.xcconfig */;
+			baseConfigurationReference = 9740EEB21CF90195004384FC /* chinauniversal.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1322,7 +1286,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FLUTTER_BUNDLE_IDENTIFIER = com.bmw.myBMW.preseries.cn.univ;
+				FLUTTER_BUNDLE_IDENTIFIER = fluttter.watch.example;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1343,44 +1307,42 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = "Debug-bmwchinauniversal";
+			name = "Debug-chinauniversal";
 		};
-		7194A6C5267CA3940040CA82 /* Debug-bmwchinauniversal */ = {
+		7194A6C5267CA3940040CA82 /* Debug-chinauniversal */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9740EEB21CF90195004384FC /* bmwchinauniversal.xcconfig */;
+			baseConfigurationReference = 9740EEB21CF90195004384FC /* chinauniversal.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = 2K6X2XEF3Z;
+				DEVELOPMENT_TEAM = A396U9F5VD;
 				ENABLE_BITCODE = YES;
-				FLUTTER_BUNDLE_IDENTIFIER = com.bmw.myBMW.preseries.cn.univ;
+				FLUTTER_BUNDLE_IDENTIFIER = fluttter.watch.example;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
 				OTHER_CFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "$(FLUTTER_BUNDLE_IDENTIFIER)";
+				PRODUCT_BUNDLE_IDENTIFIER = fluttter.watch.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "BMW Connected 2 China Univ-Dev profile";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
-			name = "Debug-bmwchinauniversal";
+			name = "Debug-chinauniversal";
 		};
-		7194A6C6267CA3940040CA82 /* Debug-bmwchinauniversal */ = {
+		7194A6C6267CA3940040CA82 /* Debug-chinauniversal */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 716A2EE2268C16EC009CA03C /* watch.xcconfig */;
 			buildSettings = {
@@ -1393,17 +1355,17 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 2K6X2XEF3Z;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = Watch_Extension;
 				INFOPLIST_FILE = Watch/Info.plist;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "$(FLUTTER_BUNDLE_IDENTIFIER).watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = fluttter.watch.example.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "mobile20 bmw universal watchapp";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1412,9 +1374,9 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
-			name = "Debug-bmwchinauniversal";
+			name = "Debug-chinauniversal";
 		};
-		7194A6C7267CA3940040CA82 /* Debug-bmwchinauniversal */ = {
+		7194A6C7267CA3940040CA82 /* Debug-chinauniversal */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 71D66C6A2689922F00A16248 /* watchextension.xcconfig */;
 			buildSettings = {
@@ -1425,21 +1387,17 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 2K6X2XEF3Z;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Watch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "$(FLUTTER_BUNDLE_IDENTIFIER).watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = fluttter.watch.example.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE_SPECIFIER = "mobile 20 universal watchapp extension";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1448,7 +1406,7 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
-			name = "Debug-bmwchinauniversal";
+			name = "Debug-chinauniversal";
 		};
 		97C147031CF9000F007C117D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1483,7 +1441,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FLUTTER_BUNDLE_IDENTIFIER = com.bmw.myBMW.preseries.cn.univ;
+				FLUTTER_BUNDLE_IDENTIFIER = fluttter.watch.example;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1539,7 +1497,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FLUTTER_BUNDLE_IDENTIFIER = com.bmw.myBMW.preseries.cn.univ;
+				FLUTTER_BUNDLE_IDENTIFIER = fluttter.watch.example;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1560,25 +1518,22 @@
 		};
 		97C147061CF9000F007C117D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9740EEB21CF90195004384FC /* bmwchinauniversal.xcconfig */;
+			baseConfigurationReference = 9740EEB21CF90195004384FC /* chinauniversal.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = 2K6X2XEF3Z;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = YES;
-				FLUTTER_BUNDLE_IDENTIFIER = com.bmw.myBMW.preseries.cn.univ;
+				FLUTTER_BUNDLE_IDENTIFIER = fluttter.watch.example;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
@@ -1586,7 +1541,7 @@
 				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(FLUTTER_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "BMW Connected 2 China Univ-Dev profile";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1602,16 +1557,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = YES;
-				FLUTTER_BUNDLE_IDENTIFIER = com.bmw.myBMW.preseries.cn.univ;
+				FLUTTER_BUNDLE_IDENTIFIER = fluttter.watch.example;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
@@ -1632,11 +1584,11 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				714B0FB7266A6B8800C62BC2 /* Debug */,
-				7194A6C7267CA3940040CA82 /* Debug-bmwchinauniversal */,
+				7194A6C7267CA3940040CA82 /* Debug-chinauniversal */,
 				7194A6BF267C9AEE0040CA82 /* Debug-globaluniversal */,
 				714B0FB8266A6B8800C62BC2 /* Release */,
 				7194A6C3267C9F540040CA82 /* Release-globaluniversal */,
-				7194A6BB267C9A330040CA82 /* Release-bmwchinauniversal */,
+				7194A6BB267C9A330040CA82 /* Release-chinauniversal */,
 				714B0FB9266A6B8800C62BC2 /* Profile */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1646,11 +1598,11 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				714B0FB3266A6B8800C62BC2 /* Debug */,
-				7194A6C6267CA3940040CA82 /* Debug-bmwchinauniversal */,
+				7194A6C6267CA3940040CA82 /* Debug-chinauniversal */,
 				7194A6BE267C9AEE0040CA82 /* Debug-globaluniversal */,
 				714B0FB4266A6B8800C62BC2 /* Release */,
 				7194A6C2267C9F540040CA82 /* Release-globaluniversal */,
-				7194A6BA267C9A330040CA82 /* Release-bmwchinauniversal */,
+				7194A6BA267C9A330040CA82 /* Release-chinauniversal */,
 				714B0FB5266A6B8800C62BC2 /* Profile */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1660,11 +1612,11 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				97C147031CF9000F007C117D /* Debug */,
-				7194A6C4267CA3940040CA82 /* Debug-bmwchinauniversal */,
+				7194A6C4267CA3940040CA82 /* Debug-chinauniversal */,
 				7194A6BC267C9AEE0040CA82 /* Debug-globaluniversal */,
 				97C147041CF9000F007C117D /* Release */,
 				7194A6C0267C9F540040CA82 /* Release-globaluniversal */,
-				7194A6B8267C9A330040CA82 /* Release-bmwchinauniversal */,
+				7194A6B8267C9A330040CA82 /* Release-chinauniversal */,
 				249021D3217E4FDB00AE95B9 /* Profile */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1674,11 +1626,11 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				97C147061CF9000F007C117D /* Debug */,
-				7194A6C5267CA3940040CA82 /* Debug-bmwchinauniversal */,
+				7194A6C5267CA3940040CA82 /* Debug-chinauniversal */,
 				7194A6BD267C9AEE0040CA82 /* Debug-globaluniversal */,
 				97C147071CF9000F007C117D /* Release */,
 				7194A6C1267C9F540040CA82 /* Release-globaluniversal */,
-				7194A6B9267C9A330040CA82 /* Release-bmwchinauniversal */,
+				7194A6B9267C9A330040CA82 /* Release-chinauniversal */,
 				249021D4217E4FDB00AE95B9 /* Profile */,
 			);
 			defaultConfigurationIsVisible = 0;
