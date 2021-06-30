@@ -108,7 +108,7 @@
 		74858FAE1ED2DC5600515810 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AFA3C8E1D35360C0083082E /* globaluniversal.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = globaluniversal.xcconfig; path = Flutter/globaluniversal.xcconfig; sourceTree = "<group>"; };
 		82DC8841B192292C72ADA792 /* Pods-Watch Extension.release-globaluniversal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch Extension.release-globaluniversal.xcconfig"; path = "Target Support Files/Pods-Watch Extension/Pods-Watch Extension.release-globaluniversal.xcconfig"; sourceTree = "<group>"; };
-		854B79D71850393B4353EEF5 /* Pods-Runner.debug-bmwchinauniversal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug-bmwchinauniversal.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug-bmwchinauniversal.xcconfig"; sourceTree = "<group>"; };
+		 
 		8A768C1FC75F4714700B1869 /* Pods-Runner.debug-chinauniversal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug-chinauniversal.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug-chinauniversal.xcconfig"; sourceTree = "<group>"; };
 		93233DCD4DE46940915A6E4E /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
 		9740EEB21CF90195004384FC /* chinauniversal.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = chinauniversal.xcconfig; path = Flutter/chinauniversal.xcconfig; sourceTree = "<group>"; };
@@ -121,13 +121,12 @@
 		A2FDFCFA428FD4F3EE27531E /* Pods-Watch Extension.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch Extension.profile.xcconfig"; path = "Target Support Files/Pods-Watch Extension/Pods-Watch Extension.profile.xcconfig"; sourceTree = "<group>"; };
 		A69C5001A207562E2F534969 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
 		ADA03EC0C1CDDC39855854E2 /* Pods-Runner.release-chinauniversal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release-chinauniversal.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release-chinauniversal.xcconfig"; sourceTree = "<group>"; };
-		C44281C4D05E83ADD5890F62 /* Pods-Runner.release-globaluniversal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release-globaluniversal.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release-globaluniversal.xcconfig"; sourceTree = "<group>"; };
-		CE9CA5CFA625EEF50B234E49 /* Pods-Watch Extension.release-bmwchinauniversal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch Extension.release-bmwchinauniversal.xcconfig"; path = "Target Support Files/Pods-Watch Extension/Pods-Watch Extension.release-bmwchinauniversal.xcconfig"; sourceTree = "<group>"; };
+		C44281C4D05E83ADD5890F62 /* Pods-Runner.release-globaluniversal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release-globaluniversal.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release-globaluniversal.xcconfig"; sourceTree = "<group>"; }; 
 		D7F199C8769532EF7258496C /* Pods-Watch Extension.debug-chinauniversal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch Extension.debug-chinauniversal.xcconfig"; path = "Target Support Files/Pods-Watch Extension/Pods-Watch Extension.debug-chinauniversal.xcconfig"; sourceTree = "<group>"; };
-		E3A911B3CFEFDD75F6A96EFA /* Pods-Watch Extension.debug-bmwchinauniversal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch Extension.debug-bmwchinauniversal.xcconfig"; path = "Target Support Files/Pods-Watch Extension/Pods-Watch Extension.debug-bmwchinauniversal.xcconfig"; sourceTree = "<group>"; };
+		 
 		E6E9389E8534E31520EB5F21 /* Pods-Runner.debug-globaluniversal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug-globaluniversal.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug-globaluniversal.xcconfig"; sourceTree = "<group>"; };
 		F35C5DE8ECBE1955EB55377F /* Pods-Watch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch Extension.release.xcconfig"; path = "Target Support Files/Pods-Watch Extension/Pods-Watch Extension.release.xcconfig"; sourceTree = "<group>"; };
-		F575461DA6483BC6CDF1A338 /* Pods-Runner.release-bmwchinauniversal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release-bmwchinauniversal.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release-bmwchinauniversal.xcconfig"; sourceTree = "<group>"; };
+		 
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,15 +174,12 @@
 				A69C5001A207562E2F534969 /* Pods-Runner.release.xcconfig */,
 				93233DCD4DE46940915A6E4E /* Pods-Runner.profile.xcconfig */,
 				E6E9389E8534E31520EB5F21 /* Pods-Runner.debug-globaluniversal.xcconfig */,
-				854B79D71850393B4353EEF5 /* Pods-Runner.debug-bmwchinauniversal.xcconfig */,
-				C44281C4D05E83ADD5890F62 /* Pods-Runner.release-globaluniversal.xcconfig */,
-				F575461DA6483BC6CDF1A338 /* Pods-Runner.release-bmwchinauniversal.xcconfig */,
+			 
+				C44281C4D05E83ADD5890F62 /* Pods-Runner.release-globaluniversal.xcconfig */, 
 				0FCCF30CFEC5BF6AD0B461CD /* Pods-Watch Extension.debug.xcconfig */,
-				5D86DEEF61CBF9F9AFC3987F /* Pods-Watch Extension.debug-globaluniversal.xcconfig */,
-				E3A911B3CFEFDD75F6A96EFA /* Pods-Watch Extension.debug-bmwchinauniversal.xcconfig */,
+				5D86DEEF61CBF9F9AFC3987F /* Pods-Watch Extension.debug-globaluniversal.xcconfig */, 
 				F35C5DE8ECBE1955EB55377F /* Pods-Watch Extension.release.xcconfig */,
-				82DC8841B192292C72ADA792 /* Pods-Watch Extension.release-globaluniversal.xcconfig */,
-				CE9CA5CFA625EEF50B234E49 /* Pods-Watch Extension.release-bmwchinauniversal.xcconfig */,
+				82DC8841B192292C72ADA792 /* Pods-Watch Extension.release-globaluniversal.xcconfig */, 
 				A2FDFCFA428FD4F3EE27531E /* Pods-Watch Extension.profile.xcconfig */,
 				8A768C1FC75F4714700B1869 /* Pods-Runner.debug-chinauniversal.xcconfig */,
 				ADA03EC0C1CDDC39855854E2 /* Pods-Runner.release-chinauniversal.xcconfig */,
