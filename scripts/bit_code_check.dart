@@ -4,11 +4,10 @@ import 'dart:io';
 void main(List<String> args) async {
   print(args);
   print("0====  ${args.isNotEmpty}");
+
+  ///Users/qxq4633/.pub-cache/git
   await checkLLVMDepdency(
-    args.isNotEmpty
-        ? args[0]
-        : '/Users/qxq4633/Library/DerivedData/Runner-fbjdnfdlzpbepggjyrkatdkgfjxj/Build/Products/Debug-universalchina-iphonesimulator',
-  );
+      args.isNotEmpty ? args[0] : '/Users/qxq4633/.pub-cache/git');
 }
 
 enum _LogLevel {

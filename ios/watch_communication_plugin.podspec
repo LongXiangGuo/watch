@@ -17,13 +17,13 @@ A new flutter plugin project.
   s.dependency 'Flutter'
   s.platform = :ios, '13.0' 
 
-  s.subspec "WatchCommunication" do |ss|
-    ss.source_files = 'ios/Classes/WatchCommunication/*.swift'
-    ss.frameworks   = ['Combine', 'WatchConnectivity', 'Foundation','ClockKit']
-    ss.dependency 'Swinject' 
-    ss.ios.deployment_target = "13.0" 
-    ss.watchos.deployment_target = "7.0"
-  end
+  #s.subspec "WatchCommunication" do |ss|
+ #  s.source_files = 'ios/Classes/WatchCommunication/*.swift'
+  s.frameworks   = ['Combine', 'WatchConnectivity', 'Foundation','ClockKit']
+  s.dependency 'Swinject' 
+  #s.ios.deployment_target = "13.0" 
+   # ss.watchos.deployment_target = "7.0"
+  #end
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   s.swift_version = '5.0'

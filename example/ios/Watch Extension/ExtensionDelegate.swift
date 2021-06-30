@@ -8,9 +8,9 @@
 import WatchKit
 import CommonCrypto
 import Security
-import Swinject
-import SwiftyRSA
-import WatchCommunication
+//import Swinject
+//import SwiftyRSA
+//import WatchCommunication
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
